@@ -297,6 +297,7 @@ header > a:hover {
 
 .work-detail .feature-info {
     padding-top: 3rem;
+    /* border: 1px solid red; */
 }
 
 .work-detail > .feature-img {
@@ -317,7 +318,7 @@ header > a:hover {
     color: var(--dark-blue);
 }
 
-.work-detail:hover  .feature-img{
+.work-detail:hover .feature-img{
     zoom: 1;
 }
 
@@ -325,7 +326,6 @@ footer {
     padding: 5rem 0 2.5rem 0;
     font-size: 2rem;
     text-align: center;
-    /* border: 1px solid red; */
     
 }
 
@@ -340,6 +340,7 @@ footer > p {
 @media (max-width:600px) {
     header {
         display:none;
+        z-index: 2;
     }
 
 /* ----- for nav hover animation ----- */
@@ -349,7 +350,11 @@ footer > p {
         right: 30px;
         top: 10px;
         cursor: pointer;
-        /* border:1px solid red */
+        z-index: 2;
+    }
+
+    #navcontrol:not(:checked) ~ header {
+        display: none;
     }
 
     #navControl:checked ~ header {
@@ -434,8 +439,6 @@ footer > p {
     .feature-card {
         flex-direction: column;
         align-items: center;
-        
-        
     }
 
     .feature-img {
